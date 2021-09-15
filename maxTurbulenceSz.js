@@ -10,7 +10,7 @@
 // Or, for i <= k < j:
 // arr[k] > arr[k + 1] when k is even, and
 // arr[k] < arr[k + 1] when k is odd.
-
+//https://leetcode.com/explore/challenge/card/september-leetcoding-challenge-2021/638/week-3-september-15th-september-21st/3976/
 
 // Example 1:
 
