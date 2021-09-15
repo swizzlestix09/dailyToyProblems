@@ -88,3 +88,5 @@ var maxTurbulenceSize = function(arr) {
     }
     return max;
 };
+
+module.exports = maxTurbulenceSize;
