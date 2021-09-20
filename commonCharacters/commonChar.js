@@ -11,7 +11,6 @@
  * Extra credit: Extend your function to handle more than two input strings.
  */
 
-
 /**
  * The function written below takes a undetermined amount of strings [arguments] and returns
  * a string containing letters that appear in all the words - ignoring spaces & dupicates
@@ -31,18 +30,12 @@
  */
 
 var commonCharacters = function(str1, str2) {
-  //master obj
   var uniqueLetters = {};
-  //set holding array
   var arrayOfSets = [];
-  //grab all strings
   var words = [...arguments];
-  //var holding amount of words
   var totalWds = words.length;
-  //string for return
   var uniqLets = '';
 
-  //creating sets..
   for (var i = 0; i < words.length; i++) {
     var eachWd = words[i];
     var uniqueChars = new Set();
@@ -70,6 +63,8 @@ var commonCharacters = function(str1, str2) {
 }
 
 //console.log(commonCharacters('row', 'arrow', 'wow'))
+// PREVIOUS WORK BELOW:
+
 //duplicate letters don't work effectively
 //  var commonCharacters = function(string1, string2) {
 
