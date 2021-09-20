@@ -15,3 +15,11 @@ test(`expected 'angely', 'erin', 'polina', 'yunqi' to output 'n'`, () => {
 test(`expected 'arrow', 'gun' to output ''`, () => {
   expect(commonChars('arrow', 'gun')).toBe('');
 });
+
+test(`expected 'this is a test', 'i hope it passes' to output 'thisea'`, () => {
+  expect(commonChars('this is a test', 'i hope it passes')).toBe('thisae');
+});
+
+test(`expected 'row', 'arrow', 'wow' to output 'ow'`, () => {
+  expect(commonChars('row', 'arrow', 'wow')).toBe('ow');
+});
