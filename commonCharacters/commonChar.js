@@ -10,21 +10,24 @@
  *
  * Extra credit: Extend your function to handle more than two input strings.
  */
+
  var commonCharacters = function(string1, string2) {
   //declare an object
   var chars = {};
   var commonChars= '';
   //capture all params in an array
   var howManyStrs = arguments.length;
+  var firstWd = arguments[0];
   var words =[...arguments];
+  var restOfWds = words.slice(1)
+  console.log(restOfWds)
+
+  //seperate first word in array from rest of array
+
+  //iterate throughfirst word populating object
+  //then iterate through rest of the array comparing letters
   //iterate through array - then iterate through each word
-  words.forEach( word => {
-    //if letter not in object set it as key = letter, value = 1
-    for(var i = 0; i < word.length; i++) {
-      chars[word[i]] ? chars[word[i]]++ : chars[word[i]] = 1;
-    }
-  })
-  console.log(chars)
+  //if letter not in object set it as key = letter, value = 1
 
   //declare empty string, declare var that holds length of array
   //iterate through object, if value > 1 push into string
@@ -36,5 +39,33 @@
   // return string
   return commonChars;
 };
+
+//  var commonCharacters = function(string1, string2) {
+//   //declare an object
+//   var chars = {};
+//   var commonChars= '';
+//   //capture all params in an array
+//   var howManyStrs = arguments.length;
+//   var words =[...arguments];
+//   //iterate through array - then iterate through each word
+//   words.forEach( word => {
+//     //if letter not in object set it as key = letter, value = 1
+//     for(var i = 0; i < word.length; i++) {
+//       console.log(word.includes(word[i]))
+//       chars[word[i]] ? chars[word[i]]++ : chars[word[i]] = 1;
+//     }
+//   })
+
+//   //declare empty string, declare var that holds length of array
+//   //iterate through object, if value > 1 push into string
+//   for (var char in chars) {
+//     if (chars[char] === howManyStrs) {
+//       commonChars += char
+//     }
+//   }
+//   // return string
+//   return commonChars;
+// };
 //18 minutes
 console.log(commonCharacters('acexivou', 'aegihobu'))
+module.exports = commonCharacters;
