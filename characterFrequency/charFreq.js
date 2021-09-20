@@ -39,3 +39,5 @@
 var characterFrequency = function(string) {
   return result;
 };
+
+module.exports = characterFrequency;
