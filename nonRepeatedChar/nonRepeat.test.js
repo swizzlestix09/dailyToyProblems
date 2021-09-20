@@ -15,3 +15,7 @@ test(`expected 'ABCDEFG' to output 'A'`, () => {
 test(`expected 'AABBCC' to output ''`, () => {
   expect(firstNonRepeatedCharacter('AABBBCC')).toBe('');
 });
+
+test(`expected 'bcabcbabcabcbababcbacbabcbabcabcbabcbadacbabcabcbacbacbbacbacbabcbabcbacb' to output 'd'`, () => {
+  expect(firstNonRepeatedCharacter('bcabcbabcabcbababcbacbabcbabcabcbabcbadacbabcabcbacbacbbacbacbabcbabcbacb')).toBe('d');
+});
