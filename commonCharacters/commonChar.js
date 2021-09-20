@@ -17,15 +17,27 @@
   var commonChars= '';
   //capture all params in an array
   var howManyStrs = arguments.length;
+  //seperate first word in array from rest of array
+
   var firstWd = arguments[0];
   var words =[...arguments];
   var restOfWds = words.slice(1)
-  console.log(restOfWds)
-
-  //seperate first word in array from rest of array
 
   //iterate throughfirst word populating object
+  for (var i = 0; i < firstWd.length; i++) {
+    if (!chars[firstWd[i]]) {
+      chars[firstWd[i]] = 1;
+    }
+  }
+
   //then iterate through rest of the array comparing letters
+  restOfWds.forEach(word => {
+    for (var i = 0; i < word.length; i++) {
+      if (chars[word[i]]) {
+        chars[word[i]]++
+      }
+    }
+  })
   //iterate through array - then iterate through each word
   //if letter not in object set it as key = letter, value = 1
 
