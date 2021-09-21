@@ -55,8 +55,14 @@ var characterFrequency = function (string) {
     }
     collection[char] ? collection[char]++ : (collection[char] = 1);
   }
-  console.log(collection);
+  var arrayOfLetters = Object.entries(collection);
+  //console.log(arrayOfLetters);
+  //sort in order of numbers, then letters.
+
+  return arrayOfLetters.sort( () => {
+
+  });
 };
 
-console.log(characterFrequency("yabba dabba do"));
+//console.log(characterFrequency("yabba dabba do")); //[ [ 'a', 4 ], [ 'b', 4 ], [ 'd', 2 ], [ 'o', 1 ], [ 'y', 1 ] ]
 module.exports = characterFrequency;
