@@ -1,4 +1,3 @@
-
 /**
  * Write a function `f(a, b)` which takes two strings as arguments and returns a
  * string containing the characters found in both strings (without duplication), in the
@@ -29,20 +28,20 @@
  * Considering there is still a nested for loop - this is still a time complexity of O(n^2).
  */
 
-var commonCharacters = function(str1, str2) {
+var commonCharacters = function (str1, str2) {
   var uniqueLetters = {};
   var arrayOfSets = [];
   var words = [...arguments];
   var totalWds = words.length;
-  var uniqLets = '';
+  var uniqLets = "";
 
   for (var i = 0; i < words.length; i++) {
     var eachWd = words[i];
     var uniqueChars = new Set();
-    for (var j = 0; j < eachWd.length; j++ ) {
+    for (var j = 0; j < eachWd.length; j++) {
       var char = eachWd[j];
-      if ( char !== ' ') {
-        uniqueChars.add( char )
+      if (char !== " ") {
+        uniqueChars.add(char);
       }
     }
     arrayOfSets.push(uniqueChars);
@@ -50,17 +49,17 @@ var commonCharacters = function(str1, str2) {
 
   for (var i = 0; i < arrayOfSets.length; i++) {
     for (var char of arrayOfSets[i]) {
-      uniqueLetters[char] ? uniqueLetters[char]++ : uniqueLetters[char]=1;
+      uniqueLetters[char] ? uniqueLetters[char]++ : (uniqueLetters[char] = 1);
     }
   }
 
   for (var letter in uniqueLetters) {
     if (uniqueLetters[letter] === totalWds) {
-      uniqLets += letter
+      uniqLets += letter;
     }
   }
   return uniqLets;
-}
+};
 
 //console.log(commonCharacters('row', 'arrow', 'wow'))
 // PREVIOUS WORK BELOW:
@@ -163,6 +162,5 @@ var commonCharacters = function(str1, str2) {
 //   return commonChars;
 // };
 //18 minutes
-
 
 module.exports = commonCharacters;
