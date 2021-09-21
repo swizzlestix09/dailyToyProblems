@@ -7,7 +7,6 @@
  */
 
  var firstNonRepeatedCharacter = function(string) {
-  var returnChar = '';
   const chars = {};
   for (var i in string) {
     if ( !chars[string[i]] ) {
@@ -18,11 +17,10 @@
 
   for (var letter in chars) {
     if (chars[letter] === 1) {
-      returnChar = letter;
-      break;
+     return letter;
     }
   }
-  return returnChar;
+  return '';
 };
 
 firstNonRepeatedCharacter('ABA')

@@ -44,13 +44,12 @@ var largestTimeFromDigits = function(arr) {
   for (let i = 0; i < arr.length; i++) {
       let num = arr[i]
       if(num <= 5 && !(hrs.includes(num)) ) {
-          mins[0] = num
-          if (mins[0] < num) {
-              mins[0] = num
-          }
+          console.log(num)
+          mins.push(num)
+          mins.sort();
       }
   }
-
+console.log(hrs, mins)
   for (let i = 0; i < arr.length; i++) {
       let num = arr[i]
           if (mins[0] && !(hrs.includes(num)) ) {
@@ -59,7 +58,7 @@ var largestTimeFromDigits = function(arr) {
          if(num <= 9 && !(hrs.includes(num)) ) {
           mins[0] = num
       }
-
+    //console.log(hrs, mins)
   }
 
 
@@ -67,6 +66,9 @@ var largestTimeFromDigits = function(arr) {
 
 };
 
-module.exports = largestTime;
+console.log( largestTimeFromDigits([1, 2, 3, 4]) );
+console.log( largestTimeFromDigits([7, 1, 3, 5]) );
+console.log( largestTimeFromDigits([5, 5, 5, 5]) );
+module.exports = largestTimeFromDigits;
 
 

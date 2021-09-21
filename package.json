@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "test": "jest"
+    "test": "jest -w"
   },
   "dependencies": {
     "eslint-config-airbnb": "^18.2.1",
