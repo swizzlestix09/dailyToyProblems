@@ -61,10 +61,10 @@ var twoSum = (array, target) => {
   return indicies;
 
 }
-console.log(twoSum([1, 5, 9, 76, 32, 3, 8, 9], 35)) //[4, 5]
-console.log(twoSum([1, 5, 9, 76, 32, 3, 8, 9], 100)) // []
-console.log(twoSum([2,7,11,15], 9)) //[0, 1]
-console.log(twoSum([-1,-2,-3,-4,-5], -8)); // [2,4]
-console.log(twoSum([1,3,4,2], 6)) //[2,3]
-console.log(twoSum([2,1,9,4,4,56,90,3], 8)) //[3,4]
-console.log(twoSum([-3,4,3,90], 0)) //[0, 2]
+// console.log(twoSum([1, 5, 9, 76, 32, 3, 8, 9], 35)) //[4, 5]
+// console.log(twoSum([1, 5, 9, 76, 32, 3, 8, 9], 100)) // []
+// console.log(twoSum([2,7,11,15], 9)) //[0, 1]
+// console.log(twoSum([-1,-2,-3,-4,-5], -8)); // [2,4]
+// console.log(twoSum([1,3,4,2], 6)) //[2,3]
+// console.log(twoSum([2,1,9,4,4,56,90,3], 8)) //[3,4]
+// console.log(twoSum([-3,4,3,90], 0)) //[0, 2]
