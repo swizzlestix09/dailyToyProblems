@@ -1,7 +1,5 @@
 /*
- *
  *       :: Example ::
- *
  *  characterFrequency('mississippi') ===
  *  [
  *    ['i', 4],
@@ -9,9 +7,7 @@
  *    ['p', 2],
  *    ['m', 1]
  *  ]
- *
  *       :: Example2 ::
- *
  *  characterFrequency('miaaiaaippi') ===
  *  [
  *    ['a', 4],
@@ -19,9 +15,7 @@
  *    ['p', 2],
  *    ['m', 1]
  *  ]
- *
  *       :: Example3 ::
- *
  *  characterFrequency('mmmaaaiiibbb') ===
  *  [
  *    ['a', 3],
@@ -29,17 +23,19 @@
  *    ['i', 3],
  *    ['m', 3]
  *  ]
- *
- *
- *
  *  Write a function that takes as its input a string and returns an array of
  *  arrays as shown below sorted in descending order by frequency and then by
  *  ascending order by character.
  */
-/* I - string
+/*  I - string
  *  O - array of arrays - in order from 1) count desc, 2) letters asce.
  *  E - string is empty, string has spaces, or string has symbols?
  *  C - always return an array - letters only?
+ *
+ * CharacterFrequency is a function that takes in a string as a parameter.
+ * An object was created to hold the letters and the frequency in which the letters appear in the string.
+ * Using a for loop, we iterate through the string. if the character is a space or number (using the string match method and regex to match numbers), we ignore it. Otherwise we check to see if the character
+ *
  */
 
 var characterFrequency = function (string) {
@@ -50,7 +46,7 @@ var characterFrequency = function (string) {
 
   for (var i = 0; i < string.length; i++) {
     var char = string[i];
-    if (char === " ") {
+    if (char === " " || char.match(/([0-9])/g)) {
       continue;
     }
     collection[char] ? collection[char]++ : (collection[char] = 1);
@@ -70,5 +66,4 @@ var characterFrequency = function (string) {
   });
 };
 
-console.log(characterFrequency('tabby'))
 module.exports = characterFrequency;

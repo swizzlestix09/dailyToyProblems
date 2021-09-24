@@ -13,6 +13,10 @@ test(`expected 'mmmaaaiiibbb' to output [ ['a', 3], ['b', 3], ['i', 3], ['m', 3]
   expect(characterFrequency('mmmaaaiiibbb')).toStrictEqual( [ ['a', 3], ['b', 3], ['i', 3], ['m', 3] ]);
 });
 
+test(`expected 'mmma43aaii23ibbb' to output [ ['a', 3], ['b', 3], ['i', 3], ['m', 3] ]`, () => {
+  expect(characterFrequency('mmma43aaii23ibbb')).toStrictEqual( [ ['a', 3], ['b', 3], ['i', 3], ['m', 3] ]);
+});
+
 test(`expected 'aime' to output [ ['a', 1], ['e', 1], ['i', 1], ['m', 1] ]`, () => {
   expect(characterFrequency('aime')).toStrictEqual( [ ['a', 1], ['e', 1], ['i', 1], ['m', 1] ]);
 });

@@ -14,7 +14,7 @@
  * The function written below takes a undetermined amount of strings [arguments] and returns
  * a string containing letters that appear in all the words - ignoring spaces & dupicates
  * We first create an empty object, an empty string ( to return the result), as well as collecting
- * the amount of arguements provided. We seperate the first word from the array of words passed in.
+ * the amount of arguments provided. We seperate the first word from the array of words passed in.
  * Using the first word as a template, we populate our object with unique letters that equal the value 1
  * (since this is the first instance of them being found). We then iterate through the array of words,
  * iterating on each letter in each word - incrementing any match found and ignoring spaces.
