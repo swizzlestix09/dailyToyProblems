@@ -59,10 +59,14 @@ var characterFrequency = function (string) {
   //console.log(arrayOfLetters);
   //sort in order of numbers, then letters.
 
-  return arrayOfLetters.sort( () => {
-
+  return arrayOfLetters.sort( (a, b) => {
+    console.log('a', a, 'b', b)
+    return a - b;
   });
 };
 
-//console.log(characterFrequency("yabba dabba do")); //[ [ 'a', 4 ], [ 'b', 4 ], [ 'd', 2 ], [ 'o', 1 ], [ 'y', 1 ] ]
+console.log(characterFrequency("yabba dabba do")); //[ [ 'a', 4 ], [ 'b', 4 ], [ 'd', 2 ], [ 'o', 1 ], [ 'y', 1 ] ]
+console.log(characterFrequency('aime')) //[ ['a', 1], ['e', 1], ['i', 1], ['m', 1] ]
+console.log(characterFrequency('tabby')) //[ ['b', 2], ['a', 1], ['t', 1], ['y', 1] ]
+
 module.exports = characterFrequency;
