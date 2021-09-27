@@ -31,28 +31,31 @@
 
 
 var lengthOfLongestSubstring = function(s) {
-
-  //create string for return
-  let result = '';
-  //create placeholder for longest original string found during iteration
-  let placeholder = '';
-  for (let i = 0; i < s.length; i++) {
-    let letter = s[i]
-    //if letter is in placeholder, placeholder is checked with result then set back to ''
-    if (placeholder.includes(letter)) {
-      if ( placeholder.length > result.length ) {
-        result = placeholder;
-      }
-      placeholder = '';
-
-    }
-    placeholder += letter;
-    //otherwise push to placeholder
+  if (s === ' ' || s.length === 1) {
+      return 1;
   }
 
-  return result
+//create string for return
+let result = 0;
+//create placeholder for longest original string found during iteration
+let placeholder = '';
+for (let i = 0; i < s.length; i++) {
+  let letter = s[i]
+  if (placeholder.includes(letter)){
+    result = Math.max(placeholder.length, result);
+    placeholder = letter;
+  } else {
+    placeholder += letter;
+  }
+}
+
+
+return result < placeholder.length ? placeholder.length : result;
 };
 
-console.log(lengthOfLongestSubstring('abcabcbb')) // 'abc'
-console.log(lengthOfLongestSubstring('bbbbb')) // 'b'
-console.log(lengthOfLongestSubstring('pwwkew')) // 'wke'
+console.log(lengthOfLongestSubstring('abcabcbb')) // 3
+console.log(lengthOfLongestSubstring('bbbbb')) // 1
+console.log(lengthOfLongestSubstring('pwwkew')) // 3
+console.log(lengthOfLongestSubstring('au'))  //2
+console.log(lengthOfLongestSubstring('aab')) //2
+console.log(lengthOfLongestSubstring('dvdf')) //3
