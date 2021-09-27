@@ -42,13 +42,13 @@ let placeholder = '';
 for (let i = 0; i < s.length; i++) {
   let letter = s[i]
   if (placeholder.includes(letter)){
+    console.log(placeholder)
     result = Math.max(placeholder.length, result);
     placeholder = letter;
   } else {
     placeholder += letter;
   }
 }
-
 
 return result < placeholder.length ? placeholder.length : result;
 };
