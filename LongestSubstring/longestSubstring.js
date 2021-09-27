@@ -32,4 +32,27 @@
 
 var lengthOfLongestSubstring = function(s) {
 
+  //create string for return
+  let result = '';
+  //create placeholder for longest original string found during iteration
+  let placeholder = '';
+  for (let i = 0; i < s.length; i++) {
+    let letter = s[i]
+    //if letter is in placeholder, placeholder is checked with result then set back to ''
+    if (placeholder.includes(letter)) {
+      if ( placeholder.length > result.length ) {
+        result = placeholder;
+      }
+      placeholder = '';
+
+    }
+    placeholder += letter;
+    //otherwise push to placeholder
+  }
+
+  return result
 };
+
+console.log(lengthOfLongestSubstring('abcabcbb')) // 'abc'
+console.log(lengthOfLongestSubstring('bbbbb')) // 'b'
+console.log(lengthOfLongestSubstring('pwwkew')) // 'wke'
