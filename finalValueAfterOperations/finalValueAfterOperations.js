@@ -49,9 +49,9 @@ var finalValueAfterOperations = function(operations) {
   var counter = 0;
 
   operations.forEach( (cmd)=> {
-    if (cmd.match(/([-]{2})/g) ){
+    if (cmd.match(/((X)[-]{2}|[-]{2}(X))/gi) ){
       counter--
-    } else if (cmd.match(/([+]{2})/g) ) {
+    } else if (cmd.match(/((X)[+]{2}|[+]{2}(X))/gi) ) {
       counter++
     }
   });
@@ -59,5 +59,5 @@ var finalValueAfterOperations = function(operations) {
   return counter;
 };
 
-console.log(finalValueAfterOperations(["--X","X++","X++"]) )//1
-console.log(finalValueAfterOperations(["++X","++X","X++"]) )//3
+
+module.exports = finalValueAfterOperations;
