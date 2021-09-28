@@ -23,6 +23,4 @@
   return '';
 };
 
-firstNonRepeatedCharacter('ABA')
-
 module.exports = firstNonRepeatedCharacter;

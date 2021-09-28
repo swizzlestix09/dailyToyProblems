@@ -34,14 +34,12 @@
  *
  * CharacterFrequency is a function that takes in a string as a parameter.
  * An object was created to hold the letters and the frequency in which the letters appear in the string.
- * Using a for loop, we iterate through the string. if the character is a space or number (using the string match method and regex to match numbers), we ignore it. Otherwise we check to see if the character
+ * Using a for loop, we iterate through the string. If the character is a space or number (using the string match method and regex to match numbers), we ignore it. Otherwise we check to see if the character
  *
  */
 
 var characterFrequency = function (string) {
-  //first step  - getting letters and how many letters there are
-  //create object
-  //iterate through  word - counting letters and adding count to object
+
   var collection = {};
 
   for (var i = 0; i < string.length; i++) {
@@ -52,8 +50,6 @@ var characterFrequency = function (string) {
     collection[char] ? collection[char]++ : (collection[char] = 1);
   }
   var arrayOfLetters = Object.entries(collection);
-  //console.log(arrayOfLetters);
-  //sort in order of numbers, then letters.
 
   return arrayOfLetters.sort( (a, b) => {
     if (a[1] < b[1]) {

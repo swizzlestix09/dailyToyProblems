@@ -34,21 +34,7 @@ var lengthOfLongestSubstring = function(s) {
   if (s === ' ' || s.length === 1) {
       return 1;
   }
-
-//create string for return
-let result = 0;
-//create placeholder for longest original string found during iteration
-let placeholder = '';
-for (let i = 0; i < s.length; i++) {
-  let letter = s[i]
-  if (placeholder.includes(letter)){
-    console.log(placeholder)
-    result = Math.max(placeholder.length, result);
-    placeholder = letter;
-  } else {
-    placeholder += letter;
-  }
-}
+//sliding window
 
 return result < placeholder.length ? placeholder.length : result;
 };
