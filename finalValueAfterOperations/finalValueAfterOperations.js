@@ -40,7 +40,7 @@ Constraints:
 1 <= operations.length <= 100
 operations[i] will be either "++X", "X++", "--X", or "X--".
 
-
+For finalValueAfterOperation, we pass in a array of strings. I created a counter variable to apply the decrements/increments for return. I decided to iterate over the array, using a HOF (forEach). Using regex expressions, if the string contains 2 - / +, it will decrement/increment the counter accordingly, returning it once the iteration is complete.
 */
 
 
@@ -48,15 +48,16 @@ operations[i] will be either "++X", "X++", "--X", or "X--".
 var finalValueAfterOperations = function(operations) {
   var counter = 0;
 
-  for ( var i = 0; i < operations.length; i++ ) {
-    if (operations[i].match(/([-]{2})/g) ){
+  operations.forEach( (cmd)=> {
+    if (cmd.match(/([-]{2})/g) ){
       counter--
-    } else if (operations[i].match(/([+]{2})/g) ) {
+    } else if (cmd.match(/([+]{2})/g) ) {
       counter++
     }
-  }
+  });
+
   return counter;
 };
 
-console.log(finalValueAfterOperations(["--X","X++","X++"]) )
-console.log(finalValueAfterOperations(["++X","++X","X++"]) )
+console.log(finalValueAfterOperations(["--X","X++","X++"]) )//1
+console.log(finalValueAfterOperations(["++X","++X","X++"]) )//3
