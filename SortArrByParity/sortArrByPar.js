@@ -17,6 +17,7 @@ Half of the integers in nums are even.
 
  * @param {number[]} nums
  * @return {number[]}
+ *We take an array, and create a new empty array with the same length as the array passed in. Two variables are initialized, one for the odd indicies and one for even. We then iterate through the array, determining whether or not the number we're on is odd or even. if its odd, store the number in the array at the indicies stored in the variable, then increment by 2. Same for even, returning array at the end of this operation.
  */
 
  var sortArrayByParityII = function(nums) {
