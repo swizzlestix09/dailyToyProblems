@@ -1,4 +1,4 @@
-/* maxSubArraySum
+/* maxSubArraySum - Colt Steele - DS & A course
  * given an array of intergers and a num, write function which
  * finds the maximum sum of a subarray with the length of the
  * number passed to the function. Subarray must consist of consecutive
