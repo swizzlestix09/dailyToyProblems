@@ -1,7 +1,7 @@
 const countUniqueValues = require('./countUniqValues');
 
 test(`expected [] to output 0`, () => {
-    expect(countUniqueValues([]]).toBe(0);
+    expect(countUniqueValues([])).toBe(0);
   });
 
 test(`expected [1, 1, 1, 1, 2] to output 2`, () => {
