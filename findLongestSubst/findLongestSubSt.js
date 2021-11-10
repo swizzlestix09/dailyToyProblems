@@ -47,6 +47,5 @@ const findLongestSubSt = (string) => {
 //   return longest;
 // }
 
-console.log(findLongestSubSt('thisisawesome')); //6
-console.log(findLongestSubSt('longestsubstring')); //8
+
 module.exports = findLongestSubSt;
