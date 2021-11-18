@@ -20,9 +20,22 @@
 // };
 
 function twoSum(numbers, target) {
-    for(let start = 0, end = numbers.length-1; start < end;){
-        let sum = numbers[start] + numbers[end]
-        if(sum === target)return [++start, ++end]
-        else sum > target ? end-- : start++
+  let min = 0;
+  let max = numbers.length -1;
+
+  while(min < max) {
+    //if number[max] > target; max--
+    //if number[min] + number[max] < target - min++
+    //if number[min] + number[max] > target - max--
+    //if number[min] + number[max] === target - return [min, max]
+    if ( (numbers[min] + numbers[max]) > target) {
+      max--;
+    } else if ( (numbers[min] + numbers[max]) < target)  {
+      min++;
+    } else if (numbers[min] + numbers[max] === target) {
+      return [min+1, max+1]
     }
+
+      
+  }
 };
