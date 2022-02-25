@@ -18,12 +18,12 @@ var inorderTraversal = function(root) {
         if(root) {
             stack.push(root)
             root = root.left
-            console.log( 'stack: ', stack, 'root: ', root)
+            //console.log( 'stack: ', stack, 'root: ', root)
         } else {
             root = stack.pop()
             solution.push(root.val)
             root = root.right
-            console.log( 'stack: ', stack, 'sol: ', solution, 'root: ', root)
+            //console.log( 'stack: ', stack, 'sol: ', solution, 'root: ', root)
         }
     }
 
