@@ -2,14 +2,25 @@
  * @param {number[]} prices
  * @return {number}
  */
+
+    //start and end variables, 0 and array.length - 1
+    //if start is smaller than end calculate difference
+    // if difference is larger than what is stored, replace 
+    //decremement end 
+    //if end === start 
+    //start ++ 
+    //while start !== array.length -1
+
+
 var maxProfit = function(prices) {
-  let rightVal = prices[prices.length -1];
-  let profit = 0;
-  
-  for (let i = prices.length -2; i >= 0; i--) {
-    profit = Math.max(profit, rightVal - prices[i]);
-    rightVal = Math.max(rightVal, prices[i])
-  }
-  
-  return profit
+  let minPrice = Infinity; 
+  let maxProfit = 0;
+    prices.forEach( price => {
+        if (price < minPrice) {
+            minPrice = price
+        } else if ( price - minPrice > maxProfit) {
+            maxProfit = price - minPrice
+        }
+    })
+    return maxProfit;
 };

@@ -1,5 +1,4 @@
-[Discussion Post (created on 12/0/2022 at 16:27)](https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/discuss/1686022/O(N)-JS-solution-using-Set)  
-<h2>448. Find All Numbers Disappeared in an Array</h2><h3>Easy</h3><hr><div><p>Given an array <code>nums</code> of <code>n</code> integers where <code>nums[i]</code> is in the range <code>[1, n]</code>, return <em>an array of all the integers in the range</em> <code>[1, n]</code> <em>that do not appear in</em> <code>nums</code>.</p>
+<h2><a href="https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/">448. Find All Numbers Disappeared in an Array</a></h2><h3>Easy</h3><hr><div><p>Given an array <code>nums</code> of <code>n</code> integers where <code>nums[i]</code> is in the range <code>[1, n]</code>, return <em>an array of all the integers in the range</em> <code>[1, n]</code> <em>that do not appear in</em> <code>nums</code>.</p>
 
 <p>&nbsp;</p>
 <p><strong>Example 1:</strong></p>
