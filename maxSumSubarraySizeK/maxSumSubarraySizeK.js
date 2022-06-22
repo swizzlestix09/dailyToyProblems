@@ -28,7 +28,6 @@ const maxSumSubArraySzK = (array, k) => {
 
   while(addIdx <= array.length - 1) {
     tempSubSum +=  array[addIdx] - array[subIdx];
-    console.log(array, 'temp', tempSubSum);
     finalSum = Math.max(finalSum, tempSubSum);
     ++subIdx, ++addIdx;
   }

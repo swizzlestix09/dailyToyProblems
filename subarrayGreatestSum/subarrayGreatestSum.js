@@ -31,7 +31,7 @@ const subarrayGreatestSum = (arr, target) => {
     for (let i = 0; i < arr.length; i++) {
       windowSum += arr[i]
       while (windowSum >= target) {
-        minLength = Math.min(minLength, i - startIdx + 1);
+        minLength = Math.min(minLength, i - startIdx);
         windowSum -= arr[startIdx]
         windowSum += 1;
 
@@ -41,5 +41,5 @@ const subarrayGreatestSum = (arr, target) => {
     return minLength === Infinity ? 0 : minLength;
 };
 
-// console.log(subarrayGreatestSum([2, 1, 5, 2, 3, 2], 7)); //2
+ console.log(subarrayGreatestSum([2, 1, 5, 2, 3, 2], 7)); //2
 module.exports = subarrayGreatestSum;
