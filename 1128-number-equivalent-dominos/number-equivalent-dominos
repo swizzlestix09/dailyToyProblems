@@ -1,0 +1,55 @@
+/**
+ * @param {number[][]} dominoes
+ * @return {number}
+ */
+
+ //create a map
+ //for each domino - sort number in domino in ascending order, and save as a key.
+   //create var called key that stores key in order. use conditional to determine this
+ //if dominocount already has this key, increment by 1. otherwise set to 1.
+   //using .has method, check if it exists, incrementing if it does.
+   //otherwise store key and set to 1.
+
+ //in a seperate for loop, calculate pairs and return
+ //iterate through dominocount and add values that are greater than 1.
+
+var numEquivDominoPairs = function(dominoes) {
+    const dominoCount = new Map();
+    let pairs = 0;
+
+    for (let domino of dominoes){
+      const key = domino[0] < domino[1] ? `${domino[0]}, ${domino[1]}` : `${domino[1]}, ${domino[0]}`
+
+      if (dominoCount.has(key)) {
+        dominoCount.set(key, dominoCount.get(key) + 1)
+      } else {
+        dominoCount.set(key, 1)
+      }
+
+    }
+
+    for (let count of dominoCount.values()) {
+        pairs += count * (count - 1)/2;
+    }
+
+    return pairs
+};
+
+/*
+* Some math:
+We have Permutations and Combinations.
+Permutation (order matters):
+a, b, c: ab, ba, ac, ca, bc, cb
+Combinations (order does not matter):
+a, b, c: ab, bc, ac
+This problem is a Combinations problem
+Formula for Combinations:
+C(n,r) = n!/( r! (n - r)! )
+
+Simplifying for r = 2:
+C(n, 2) = n*(n-1)/2
+
+Hope that clarifies the description a little bit.
+
+Familiarize yourself with Map in J
+*/
