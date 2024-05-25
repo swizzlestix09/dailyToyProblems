@@ -51,5 +51,28 @@ C(n, 2) = n*(n-1)/2
 
 Hope that clarifies the description a little bit.
 
-Familiarize yourself with Map in J
+Familiarize yourself with Map in Js
+
+Let's delve into why we use the formula
+count × ( count − 1 ) / 2
+count × (count−1)/2 to calculate the number of pairs from the count of equivalent dominoes.
+
+Understanding the Pair Counting Formula
+When you have a certain number of identical items (in this case, equivalent dominoes), and you want to find out how many unique pairs you can form from these items, you use the combination formula.
+
+Combinations Formula:
+The general combination formula for choosing 2 items out of
+𝑛 n items (denoted as 𝐶 (𝑛,2)C(n,2)) is given by:
+Formula for Combinations:
+C(n,r) = n!/( r! (n - r)! )
+
+Simplifying for r = 2:
+C(n, 2) = n*(n-1)/2
+
+Here's the breakdown:
+
+𝑛
+n: The number of times a particular unique domino appears.
+(n−1): For each item, there are (𝑛−1) other items to pair with.
+Dividing by 2 (/2): Each pair is counted twice in the multiplication (once for each order), so we divide by 2 to correct this.
 */
